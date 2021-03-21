@@ -158,6 +158,7 @@ ed by the language code "es").
     public void streamPipeline15() {
         countries.stream()
                 .filter(country -> country.getArea() != null && country.getArea().doubleValue() < 1)
+                .map(Country::getName)
                 .forEach(System.out::println);
     }
 
